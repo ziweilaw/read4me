@@ -1,0 +1,67 @@
+{
+  "name": "read4me",
+  "version": "0.1.0",
+  "description": "Read PDFs aloud for researchers",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "test:py": "sidecar/.venv/bin/python -m pytest tests",
+    "sidecar": "cd sidecar && .venv/bin/pyinstaller --noconfirm --clean --onedir --name read4me-sidecar --distpath ../build/sidecar --workpath ../build/pyi-work --specpath ../build --paths . --collect-all kokoro_onnx --collect-all espeakng_loader --collect-all phonemizer --collect-all language_tags --collect-all pysbd --collect-all onnxruntime --collect-all soundfile --hidden-import r4m.epub --hidden-import r4m.tts server.py",
+    "dist": "electron-vite build && electron-builder --mac"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.3.289",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.6"
+  },
+  "author": "Vienna Ziwei",
+  "private": true,
+  "build": {
+    "appId": "com.vienna.read4me",
+    "productName": "Read4me",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**",
+      "resources/icon.png",
+      "package.json"
+    ],
+    "electronDist": "node_modules/electron/dist",
+    "extraResources": [
+      {
+        "from": "build/sidecar/read4me-sidecar",
+        "to": "sidecar"
+      },
+      {
+        "from": "sidecar/models",
+        "to": "models"
+      }
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "resources/icon.icns",
+      "category": "public.app-category.education",
+      "identity": null
+    }
+  }
+}

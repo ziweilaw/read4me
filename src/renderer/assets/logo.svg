@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd3e8"/><stop offset="1" stop-color="#c9bbff"/></linearGradient>
+    <clipPath id="round"><circle cx="64" cy="64" r="62"/></clipPath>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#bg)"/>
+  <g clip-path="url(#round)">
+    <!-- lab coat + shirt + bow tie -->
+    <path d="M14 130 Q18 96 64 94 Q110 96 114 130 Z" fill="#ffffff"/>
+    <path d="M50 96 L64 112 L78 96 Z" fill="#cfe3ff"/>
+    <rect x="57" y="82" width="14" height="16" rx="5" fill="#f5c9a8"/>
+    <path d="M64 101 L52 95 L52 107 Z M64 101 L76 95 L76 107 Z" fill="#ff6fa5"/>
+    <circle cx="64" cy="101" r="3.2" fill="#e84d8a"/>
+    <!-- ears, face, cheeks -->
+    <circle cx="37" cy="66" r="5" fill="#ffd9bd"/><circle cx="91" cy="66" r="5" fill="#ffd9bd"/>
+    <circle cx="64" cy="64" r="27" fill="#ffe0c8"/>
+    <circle cx="46" cy="75" r="5" fill="#ff9fbd" opacity=".55"/><circle cx="82" cy="75" r="5" fill="#ff9fbd" opacity=".55"/>
+    <!-- hair -->
+    <path d="M37 60 Q36 36 64 35 Q92 36 91 60 Q84 47 64 47 Q44 47 37 60 Z" fill="#5a3a2e"/>
+    <!-- glasses -->
+    <circle cx="51" cy="65" r="11" fill="#ffffff" fill-opacity=".55" stroke="#3a2f4a" stroke-width="3.2"/>
+    <circle cx="77" cy="65" r="11" fill="#ffffff" fill-opacity=".55" stroke="#3a2f4a" stroke-width="3.2"/>
+    <path d="M62 64 Q64 61 66 64" stroke="#3a2f4a" stroke-width="3" fill="none"/>
+    <path d="M40 63 L36 61 M88 63 L92 61" stroke="#3a2f4a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="52" cy="66" r="3.6" fill="#3a2f4a"/><circle cx="78" cy="66" r="3.6" fill="#3a2f4a"/>
+    <circle cx="53.2" cy="64.8" r="1.2" fill="#fff"/><circle cx="79.2" cy="64.8" r="1.2" fill="#fff"/>
+    <path d="M44 52 Q51 48 58 52 M70 52 Q77 48 84 52" stroke="#5a3a2e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <!-- smile + little buck tooth -->
+    <path d="M56 78 Q64 85 72 78" stroke="#a24b4b" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <rect x="62" y="80" width="4.5" height="4.5" rx="1" fill="#fff" stroke="#c9a28f" stroke-width=".8"/>
+    <!-- graduation cap -->
+    <path d="M43 40 L43 50 Q64 60 85 50 L85 40 L64 48 Z" fill="#3d3960"/>
+    <polygon points="64,14 110,31 64,48 18,31" fill="#2d2a45"/>
+    <polygon points="64,14 110,31 64,48 18,31" fill="none" stroke="#4a4670" stroke-width="1.5"/>
+    <path d="M64 31 L101 35 L101 52" stroke="#ffc83d" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="101" cy="54" r="3.4" fill="#ffc83d"/><circle cx="64" cy="31" r="3" fill="#ffc83d"/>
+    <!-- book -->
+    <rect x="34" y="106" width="60" height="26" rx="4" fill="#7a6cff"/>
+    <rect x="38" y="106" width="52" height="4" fill="#fff"/>
+    <path d="M64 106 V132" stroke="#5a4cd6" stroke-width="2"/>
+    <path d="M70 118 q3 -4 6 0 q3 -4 6 0 q0 5 -6 8 q-6 -3 -6 -8z" fill="#ffb3cf" transform="translate(-1 -2) scale(.95)"/>
+  </g>
+</svg>

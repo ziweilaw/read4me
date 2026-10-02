@@ -1,0 +1,11 @@
+node_modules/
+dist/
+out/
+sidecar/.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+sidecar/models/
+build/
+release/
+*.dmg
