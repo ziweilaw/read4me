@@ -8,7 +8,8 @@
     "build": "electron-vite build",
     "test:py": "sidecar/.venv/bin/python -m pytest tests",
     "sidecar": "cd sidecar && .venv/bin/pyinstaller --noconfirm --clean --onedir --name read4me-sidecar --distpath ../build/sidecar --workpath ../build/pyi-work --specpath ../build --paths . --collect-all kokoro_onnx --collect-all espeakng_loader --collect-all phonemizer --collect-all language_tags --collect-all pysbd --collect-all onnxruntime --collect-all soundfile --hidden-import r4m.epub --hidden-import r4m.tts server.py",
-    "dist": "electron-vite build && electron-builder --mac"
+    "dist": "electron-vite build && electron-builder --mac",
+    "dist:win": "electron-vite build && electron-builder --win"
   },
   "dependencies": {
     "pdfjs-dist": "^6.3.289",
@@ -62,6 +63,21 @@
       "icon": "resources/icon.icns",
       "category": "public.app-category.education",
       "identity": null
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "resources/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   }
 }

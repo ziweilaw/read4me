@@ -29,3 +29,6 @@ npm run sidecar   # bundle Python backend (PyInstaller)
 npm run dist      # package the .dmg into release/
 ```
 Kokoro model files (`kokoro-v1.0.onnx`, `voices-v1.0.bin`) go in `sidecar/models/` (not in git).
+
+## Licence
+Copyright (c) 2026 Ziwei Luo. All rights reserved. See [LICENSE](LICENSE).
